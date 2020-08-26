@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500;600;700&family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c732087824.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="favicon_io/favicon-32x32.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="baap">
+   
+    <div class="container">
+      <h1 id="status">Refresh Me</h1>
+
+      <div class="dice">
+        <p id="player1">Player 1</p>
+        <img id="img1" class="img1" src="images/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p id="player2">Player 2</p>
+        <img id="img2" class="img2" src="images/dice6.png">
+      </div>
+      <br>
+      <div class="trigger">
+        
+        <button onclick="hello();">Play!</button>
+
+      </div>
+
+      
+
+
+    
+
+
+     
+      
+    </div>
+
+    <div class="points">
+      <h1>Points</h1>
+      <p id="draw">Games Played- 0</p>
+      <p id="win1">Player1- Game has not been started yet!</p>
+      <p id="win2">Player2- has not been started yet!</p>
+
+
+
+    </div>
+
+  </div>
+
+    <script>
+
+      var player1=prompt("Enter the name of Player1");
+      var player2=prompt("Enter the name of Player2");
+      
+      document.getElementById('player1').innerHTML=player1;
+      document.getElementById('player2').innerHTML=player2;
+      document.getElementById('win1').innerHTML=player1+"- 0";
+      document.getElementById('win2').innerHTML=player2+"- 0";
+      var win1=0;
+      var win2=0;
+      var draw=0;
+      var play=0;
+
+
+      function hello(){
+     play++;
+     
+     
+      document.getElementById("draw").innerHTML="Games Played- "+play;
+     var p1=Math.floor(Math.random()*6 + 1);
+     var p2=Math.floor(Math.random()*6 + 1);
+     document.getElementById('img1').src="images/dice"+p1+".png";
+     document.getElementById('img2').src="images/dice"+p2+".png";
+    
+     if(p1==p2)
+     {
+      
+      document.getElementById("status").innerHTML="Oops! It's draw";
+    }
+    else if(p1>p2)
+    {
+      win1++;
+      document.getElementById("win1").innerHTML=player1+"- "+win1;
+      document.getElementById("status").innerHTML=player1+" Wins ! </i>";
+      
+    }
+    else 
+    {
+      win2++;
+      document.getElementById("win2").innerHTML=player2+"- "+win2;
+      document.getElementById("status").innerHTML=player2+" Wins ! </i>";
+      
+    }
+  }
+
+</script>
+
+
+  </body>
+
+  <footer>
+    <i class="fas fa-heart"></i> Designed by Aayush Harwani
+  </footer>
+</html>

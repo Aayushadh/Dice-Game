@@ -1,0 +1,59 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+.baap
+{
+  display: flex;
+}
+
+body {
+  background-color: burlywood;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 5px 0 #232931;
+  font-size: 5rem;
+  color: brown;
+}
+
+p {
+  font-size: 2rem;
+  color: brown;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  font-size:2rem;
+  margin-top: 5%;
+  color: black;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
+ button 
+ {
+   font-size:2rem;
+   margin-top:50px;
+ }
+
+.points
+{
+  text-align: center;
+  font-size: large;
+  border:3px solid brown;
+  width: 30%;
+}
